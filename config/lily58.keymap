@@ -8,15 +8,6 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
-    macros {
-        ipadd_win: ipadd_win {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&none &kp H &kp E &kp L &kp L &kp O &kp SPACE &kp W &kp O &kp R &kp L &kp D>;
-            label = "IPADD_WIN";
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
@@ -70,11 +61,11 @@
 
         macro {
             bindings = <
-&trans  &trans      &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &ipadd_win  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans      &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans      &trans  &trans  &trans  &trans  &to 2     &to 3   &trans  &trans  &trans  &trans  &trans  &trans
-                            &trans  &trans  &to 0   &trans    &trans  &to 1   &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &none   &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &to 2     &to 3   &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &to 0   &trans    &trans  &to 1   &trans  &trans
             >;
         };
     };
